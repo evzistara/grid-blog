@@ -1,38 +1,45 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
-
-body {
-	margin: 0;
-	padding: 30px;
-	font-family:  'Alice', serif;
-	font-size: 18px;
-	line-height: 1.5;
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
 }
 
-h1, h2, h3 {
-	font-family: 'Kaushan Script', cursive;
-	font-weight: normal;
-	margin: 0;
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: "Alice", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Kaushan Script", cursive;
+  font-weight: normal;
+  margin: 0;
 }
 
 blockquote {
-	font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
 }
 
 /* --------------------------------------------------- */
 
 /* barvy */
 :root {
-	--svetla: #edf3f5;
-	--seda: #b2bec3;
-	--tmava: #636e72;
-	--oranzova: #ee5a24;
-	--cervena: #ea2027;
-	--zluta: #f79f1f;
-	--zelena: #a3cb38;
-	--limetka: #c4e538;
+  --svetla: #edf3f5;
+  --seda: #b2bec3;
+  --tmava: #636e72;
+  --oranzova: #ee5a24;
+  --cervena: #ea2027;
+  --zluta: #f79f1f;
+  --zelena: #a3cb38;
+  --limetka: #c4e538;
 }
 
 /*
@@ -66,3 +73,87 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  gap: 40px;
+}
+
+.blog figure,
+blockquote {
+  grid-column: 1/-1;
+}
+
+header,
+h1,
+h2,
+p,
+footer {
+  grid-column: 2 /3;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  color: var(--zelena);
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 70px;
+}
+h2 {
+  font-size: 52px;
+}
+.meta {
+  color: var(--seda);
+}
+
+p {
+  margin: 0;
+}
+
+.tip {
+  display: inline;
+  color: var(--tmava);
+  padding: 10px;
+  background-color: var(--svetla);
+  height: min-content;
+}
+.tip a {
+  color: var(--oranzova);
+}
+
+.tip-vlevo {
+  border-right: 2px solid var(--zluta);
+  text-align: right;
+  grid-column: 1;
+}
+.tip-vpravo {
+  border-left: 2px solid var(--zluta);
+  text-align: left;
+}
+
+blockquote {
+  text-align: center;
+  font-size: 36px;
+  color: var(--seda);
+  margin: 0;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  background-color: var(--zelena);
+  margin: 20px auto;
+}
+footer,
+footer a {
+  color: var(--seda);
+}
