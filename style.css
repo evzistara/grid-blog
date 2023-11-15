@@ -92,7 +92,7 @@ footer {
   grid-column: 2 /3;
 }
 
-img {
+.photo {
   width: 100%;
 }
 
@@ -153,7 +153,12 @@ blockquote::after {
   background-color: var(--zelena);
   margin: 20px auto;
 }
+
 footer,
 footer a {
   color: var(--seda);
+}
+
+.tip-vlevo img {
+  max-width: 100%;
 }
