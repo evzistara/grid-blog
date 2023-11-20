@@ -159,6 +159,7 @@ footer a {
   color: var(--seda);
 }
 
-.tip-vlevo img {
-  max-width: 100%;
+.tip-vlevo .img {
+  width: 150px;
+  align-items: center;
 }
